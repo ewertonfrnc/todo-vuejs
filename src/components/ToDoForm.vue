@@ -1,14 +1,20 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <label for="new-todo-input"> Qual a próxima tarefa? </label>
+    <h2 class="label-wrapper">
+      <label for="new-todo-input" class="label__lg">
+        Qual sua próxima tarefa?
+      </label>
+    </h2>
+
     <input
       type="text"
       id="new-todo-input"
       name="new-todo"
       autocomplete="off"
       v-model.lazy.trim="label"
+      class="input__lg"
     />
-    <button type="submit">Adicionar</button>
+    <button type="submit" class="btn btn__primary btn__lg">Adicionar</button>
   </form>
 </template>
 
